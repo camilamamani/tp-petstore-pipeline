@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run: echo "this is the build job"
       # git pull de la rama master del proyecto
-      - run: git pull origin master
+      - run: git pull origin main
       # compilar el gradle
       - run: gradle build
       # ejecutar el jar
@@ -41,11 +41,9 @@ jobs:
           
 # Orchestrate our job run sequence
 workflows:
-  build_and_test:
+  build_and_test_all:
     jobs:
       - build
       - test
-  validate_and_deploy:
-    jobs:
       - validate
       - deploy
