@@ -10,11 +10,11 @@ jobs:
     steps:
       - checkout
       - run: echo "this is the build job"
-      // git pull de la rama master del proyecto
+      # git pull de la rama master del proyecto
       - run: git pull origin master
-      // compilar el gradle
+      # compilar el gradle
       - run: gradle build
-      //ejecutar el jar
+      # ejecutar el jar
       - run: gradle jar
 
   test:
